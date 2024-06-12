@@ -1,0 +1,7 @@
+#Docker compose file for Express.js app to used for local testing
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
