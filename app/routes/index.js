@@ -68,4 +68,16 @@ router.get('/resume', function (req, res, next) {
   });
 });
 
+router.get('/contact', function (req, res, next) {
+  res.render('contact', {
+    title: 'Contact Me'    
+  });
+});
+
+router.get('/countries', function (req, res, next) {
+  res.render('countries', {
+    title: 'Countries Visited'    
+  });
+});
+
 module.exports = router;
