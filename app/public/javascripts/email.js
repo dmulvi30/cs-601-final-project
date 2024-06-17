@@ -1,6 +1,6 @@
 
-document.getElementById("send-email-btn").addEventListener("click", myFunction);
+document.getElementById("send-email-btn").addEventListener("click", emailSent);
 
-function myFunction() {
+function emailSent() {
   alert ("Thanks! Your email was sent successfully!");
 }
