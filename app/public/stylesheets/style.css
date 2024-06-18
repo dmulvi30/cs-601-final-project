@@ -44,15 +44,13 @@ body {
 }
 
 .content {
-    align-items: center;
-    border: .15em dotted rgb(0, 255, 234);
+    align-items: center;    
     height: 75vh;
     margin-left: 18em;
     width: 75%;
 }
 
 #country-flex {
-    border: .15em solid red;
     display: flex;
     min-height: 50vh;
     position: relative;
@@ -132,11 +130,12 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #flex-header>div {
-    padding: .5em;
+    padding: .15em;
 }
 
 footer {
@@ -144,7 +143,7 @@ footer {
     background-color: #36454F;
     bottom: 0;
     display: inline-flex;
-    height: 5em;
+    height: 3em;
     justify-content: center;
     overflow: auto;
     position: fixed;
@@ -222,6 +221,10 @@ h2 {
     margin-top: 1em;
 }
 
+img {
+    border: .25em solid #36454F;
+}
+
 #kids-flex {
     border: .15em solid red;
     display: flex;
@@ -251,9 +254,10 @@ nav a {
     color: white;
     display: block;
     margin-left: 1em;
-    margin-top: 1em;
-    padding: 16px;
+    margin-top: .75em;
+    padding: .75em;
     text-decoration: none;
+    overflow: auto;
 }
 
 nav a:hover {
@@ -262,7 +266,6 @@ nav a:hover {
 
 #page-container {
     position: relative;
-    border: .15em solid rgb(53, 18, 136);
     height: 92vh;
 }
 
@@ -277,17 +280,16 @@ nav a:hover {
     min-height: 50vh;
 }
 
-.travel-slideshow {
-    display: none;
-}
+
 
 #travel-flex {
-    border: .15em solid red;
+    
     display: flex;
     position: relative;
 }
 
 #travel-images>img {
+    
     display: block;
     height: auto;
 }
@@ -296,16 +298,25 @@ nav a:hover {
     margin: auto;
     justify-content: center;
     padding-top: .5em;
+    padding-bottom: 1.5em;
     position: relative;
     width: 50%;
 }
 
+.travel-slideshow {
+    display: none;
+}
+
+.travel-slideshow img {
+    width: 100%;
+}
+
 #travel-text {
+    display: block;
     margin: auto;
     position: relative;
-    width: 45%;
-    vertical-align: text-top;
-    height: 67vh;
+    width: 50%;
+    height: 65vh;
 }
 
 #prev,
@@ -382,7 +393,7 @@ nav a:hover {
 }
 
 @media screen and (max-width: 400px) {
-    .sidebar a {
+    nav a {
         text-align: center;
         float: none;
     }
