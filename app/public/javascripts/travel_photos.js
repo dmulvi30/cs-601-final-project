@@ -1,40 +1,40 @@
-const previous_button = document.getElementById("prev");
-let slideIndex = 0;
+const previous_button = document.getElementById("previous");
+const next_button = document.getElementById("next");
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+let slide_index = 0;
+
+function nextSlide(number) {
+    getSlide(slide_index += number);
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(number) {
+    getSlide(slide_index = number);
 }
 
-function showSlides(n) {
-    let i;
+function getSlide(number) {
+    let index;
     let slides = document.getElementsByClassName("travel-slideshow");
 
 
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    if (number > slides.length) {
+        slide_index = 1
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");        
+    if (number < 1) {
+        slide_index = slides.length
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    if (id_kara === true) {
-        document.getElementById("travel-text-title").innerHTML = "Karakoram Highway";
-    }else if (id_india === true) {
-        document.getElementById("travel-text-title").innerHTML = "India";
-    } else if (id_pan === true) {
-        document.getElementById("travel-text-title").innerHTML = "Panama";
+    for (index = 0; index < slides.length; index++) {
+        slides[index].style.display = "none";
     }
+    for (index = 0; index < dots.length; index++) {
+        dots[index].className = dots[index].className.replace(" active", "");
+    }
+    slides[slide_index - 1].style.display = "block";
+    dots[slide_index - 1].className += " active";
 }
 
-showSlides(slideIndex);
-previous_button.addEventListener("onclick", plusSlides(-1));
+getSlide(slide_index);
+previous_button.addEventListener("click", nextSlide(-1));
+next_button.addEventListener("click", nextSlide(1));
 
 

@@ -20,13 +20,6 @@ body {
     width: 100%;
 }
 
-#books-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
-}
-
 #contact-form-heading {
     align-items: center;
     margin: auto;
@@ -35,25 +28,74 @@ body {
 
 #contact-form {
     border: .15em solid #36454F;
-    margin: auto;
     height: 52vh;
+    margin: auto;
     padding: 1em;
     position: relative;
     vertical-align: text-top;
-    width: 65%;
+    width: 45%;
 }
 
 .content {
-    align-items: center;    
+    align-items: center;
     height: 75vh;
     margin-left: 18em;
     width: 75%;
 }
 
 #country-flex {
+    border: .15em solid red;
     display: flex;
     min-height: 50vh;
     position: relative;
+}
+
+#country-map {
+    /*border: .5em solid #36454F;*/
+    border: .15em solid blue;
+    display: flex;
+    margin: auto;
+    position: relative;
+    width: 50%;
+}
+
+#country-table {
+    /*border: .5em solid #36454F;*/
+    border: .15em solid green;
+    display: flex;
+    margin: auto;
+    position: relative;
+    width: 50%;
+}
+
+#home-text {
+    height: 67vh;
+    margin-right: 1em;
+    margin-top: -1em;
+    position: relative;
+    vertical-align: text-top;
+    width: 45%;
+}
+
+.dot {
+    cursor: pointer;
+    height: .5em;
+    width: .5em;
+    margin: 0 .15rem;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.0s;
 }
 
 #education-content {
@@ -91,19 +133,19 @@ body {
 
 #education-logos {
     margin: auto;
+    max-width: 100%;
     min-height: 47vh;
     padding: 1em;
     padding-right: 5em;
     position: relative;
     vertical-align: text-top;
-    max-width: 100%;
 }
 
 #education-logos a {
-    margin: auto;
     background-color: transparent;
     color: black;
     display: inline;
+    margin: auto;
     padding: 1em;
     width: 15em;
 }
@@ -111,8 +153,8 @@ body {
 #education-logos img {
     border: .15em solid #36454F;
     display: block;
-    margin: auto;
     height: auto;
+    margin: auto;
     width: 10em;
 }
 
@@ -129,9 +171,9 @@ body {
     color: whitesmoke;
     display: flex;
     justify-content: center;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 #flex-header>div {
@@ -158,7 +200,7 @@ footer a {
     padding-right: .5em;
 }
 
-footer>a:hover {
+footer a:hover {
     color: gray;
 }
 
@@ -167,24 +209,21 @@ h2 {
     text-align: center;
 }
 
-#history-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
-}
-
-#hobbies-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
-}
-
 #home-flex {
     display: flex;
-    position: relative;
     height: 60vh;
+    position: relative;
+}
+
+#home-iframe {
+    border: none;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
 }
 
 #home-media {
@@ -195,23 +234,16 @@ h2 {
 }
 
 #home-text {
+    height: 67vh;
     margin-right: 1em;
     margin-top: -1em;
     position: relative;
-    width: 45%;
     vertical-align: text-top;
-    height: 67vh;
+    width: 45%;
 }
 
-.responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+img {
+    border: .25em solid #36454F;
 }
 
 #image-header {
@@ -221,22 +253,49 @@ h2 {
     margin-top: 1em;
 }
 
-img {
-    border: .25em solid #36454F;
+input[type=text],
+input[type=email],
+select {
+    border: .01em solid black;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 1em 0;
+    padding: 1em 1em;
+    width: 100%;
 }
 
-#kids-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
+input[type=submit] {
+    border: .01em solid black;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: large;
+    font-weight: b;
+    margin: 1em 0;
+    padding: 1em 1em;
+    width: 25%;
+}
+
+@keyframes fade {
+    from {
+        opacity: .25
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+label {
+    font-weight: bold;
 }
 
 #movies-flex {
     border: .15em solid red;
     display: flex;
-    position: relative;
     min-height: 50vh;
+    position: relative;
 }
 
 nav {
@@ -265,38 +324,35 @@ nav a:hover {
 }
 
 #page-container {
-    position: relative;
     height: 92vh;
+    position: relative;
 }
 
 #profile-photo {
     border-radius: 50%;
 }
 
-#resume-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
+#travel-country-image {
+    display: block;
+    margin: auto;
+    padding-left: 8em;
+    padding-top: 1em;
+    width: 85%;
 }
-
-
 
 #travel-flex {
-    
     display: flex;
     position: relative;
 }
 
-#travel-images>img {
-    
+#travel-images img {
     display: block;
     height: auto;
 }
 
 #travel-photos {
-    margin: auto;
     justify-content: center;
+    margin: auto;
     padding-top: .5em;
     padding-bottom: 1.5em;
     position: relative;
@@ -311,72 +367,65 @@ nav a:hover {
     width: 100%;
 }
 
+#travel-table {
+    border: 1px solid purple;
+    border-collapse: collapse;
+    margin: auto;
+    width: 95%;
+}
+
+#travel-table th {
+    border: 1px solid purple;
+    height: 2.5rem;
+    text-align: center;
+}
+
+#travel-table tr {
+    border: 1px solid purple;
+    text-align: left;
+}
+
+#travel-table td {
+    border: 1px solid purple;
+    padding: 15px;
+    text-align: center;
+}
+
 #travel-text {
     display: block;
+    height: 57vh;
     margin: auto;
     position: relative;
     width: 50%;
-    height: 65vh;
 }
 
-#prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
+#previous,
+#next {
+    border-radius: 0 .2rem .2rem 0;
     color: white;
+    cursor: pointer;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.15em;
+    margin-top: -1.25rem;
+    position: absolute;
+    padding: 1rem;
+    top: 50%;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
+    width: auto;
 }
 
-.next {
+#next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: .2rem 0 0 .2rem;
 }
 
-#prev:hover,
-.next:hover {
+#previous:hover,
+#next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dot {
-    cursor: pointer;
-    height: .5em;
-    width: .5em;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 43rem) {
     nav {
         width: 100%;
         height: auto;
@@ -392,18 +441,11 @@ nav a:hover {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 25rem) {
     nav a {
         text-align: center;
         float: none;
     }
-}
-
-#wife-flex {
-    border: .15em solid red;
-    display: flex;
-    position: relative;
-    min-height: 50vh;
 }
 
 #send-email-btn {
@@ -412,36 +454,7 @@ nav a:hover {
     color: white;
     display: block;
     font-size: 1.25em;
-
     margin-top: 1em;
-    padding: 16px;
+    padding: 1rem;
     text-decoration: none;
-}
-
-label {
-    font-weight: bold;
-}
-
-input[type=text],
-input[type=email],
-select {
-    border: .01em solid black;
-    border-radius: 4px;
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 1em 0;
-    padding: 1em 1em;
-    width: 100%;
-}
-
-input[type=submit] {
-    border: .01em solid black;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: large;
-    display: inline-block;
-    margin: 1em 0;
-    padding: 1em 1em;
-    width: 25%;
-    font-weight: b;
 }
