@@ -44,24 +44,21 @@ body {
 }
 
 #country-flex {
-    border: .15em solid red;
     display: flex;
     min-height: 50vh;
     position: relative;
 }
 
 #country-map {
-    /*border: .5em solid #36454F;*/
-    border: .15em solid blue;
+    
     display: flex;
+    height: 53vh;
     margin: auto;
     position: relative;
     width: 50%;
 }
 
 #country-table {
-    /*border: .5em solid #36454F;*/
-    border: .15em solid green;
     display: flex;
     margin: auto;
     position: relative;
@@ -368,25 +365,29 @@ nav a:hover {
 }
 
 #travel-table {
-    border: 1px solid purple;
+    border: 1px solid #36454F;
     border-collapse: collapse;
     margin: auto;
     width: 95%;
 }
 
 #travel-table th {
-    border: 1px solid purple;
+    border: 1px solid #36454F;
+    background-color: #36454F;
+    color: whitesmoke;
     height: 2.5rem;
     text-align: center;
 }
 
 #travel-table tr {
-    border: 1px solid purple;
+    background-color: whitesmoke;    
     text-align: left;
 }
 
 #travel-table td {
-    border: 1px solid purple;
+    border: 1px solid #36454F;
+    color:black;
+    font-weight: bold;
     padding: 15px;
     text-align: center;
 }
