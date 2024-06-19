@@ -38,6 +38,6 @@ The application runs on a container deployed to AWS Elastic Container Services [
 
 [1] Express.js: https://expressjs.com/
 
-[2] https://handlebarsjs.com/
+[2] Handlebars: https://handlebarsjs.com/
 
 [3] Amazon Web Services ECS: https://aws.amazon.com/ecs/
