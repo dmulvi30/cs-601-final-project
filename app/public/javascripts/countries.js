@@ -35,8 +35,6 @@ function createTable(countries) {
             data_count = 0;            
         }
     }
-
-
 }
 
 //load content and add to DOM

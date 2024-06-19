@@ -1,9 +1,12 @@
 <div id="contact-form-heading">
     <h1>{{title}}</h1>
-    <p>If you would like to reach me for further information, please fill out the form below and I will send you an email with further instructions.</p>
+    <div id="errors"></div>
+    <div id="submit-message"></div>    
 </div>
 <div id="contact-form">
-
+    <p>If you would like to reach me for further information, please fill out
+        the form below and I will send you an email with further
+        instructions.</p>
     <form>
         <label id="first-name-label" for="first-name">First Name</label>
         <input type="text" id="first-name"
@@ -20,6 +23,6 @@
             <button id="send-email-btn">Contact Me!</button>
         </div>
     </form>
+    
 </div>
-
-<script src="/javascripts/email.js"></script>
+<script src="../javascripts/contact.js"></script>
