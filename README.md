@@ -37,5 +37,7 @@ This page includes a contact form with form validation.
 The application runs on a container deployed to AWS Elastic Container Services [3], and is fronted by an application load balancer that routes traffic to the application on port 443. 
 
 [1] Express.js: https://expressjs.com/
+
 [2] https://handlebarsjs.com/
+
 [3] Amazon Web Services ECS: https://aws.amazon.com/ecs/
